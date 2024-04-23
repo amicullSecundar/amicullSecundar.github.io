@@ -18,8 +18,8 @@ html, body {
 button {
 	border: 1px solid darkred;
 	background-color: cyan;
-	width:15%;
-	height: 4%;
+	width:25%;
+	height: 6%;
 }
   #mijloc {
     display: flex;
