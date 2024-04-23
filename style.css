@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+	overflow: hidden;
+  }
+
+  body {
+    background: black;
+	text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    border: 1px solid white;
+    max-width: 100%; /* Face ca canvas-ul să se redimensioneze proporțional la lățimea ecranului */
+    max-height: 100%; /* Face ca canvas-ul să se redimensioneze proporțional la înălțimea ecranului */
+}
+button {
+	border: 1px solid darkred;
+	background-color: cyan;
+	width:15%;
+	height: 4%;
+}
+  #mijloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
