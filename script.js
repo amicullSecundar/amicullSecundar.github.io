@@ -121,29 +121,33 @@ document.addEventListener('keydown', function(e) {
 
 var hammertime = new Hammer(document.getElementById('game'));
 
+hammertime.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL // Permite swipe în toate direcțiile
+});
+
 hammertime.on('swipeleft', function(ev) {
-    if (snake.dx !== grid) { // Verificăm dacă șarpele nu se mișcă deja spre dreapta
+    if (snake.dx !== grid) {
         snake.dx = -grid;
         snake.dy = 0;
     }
 });
 
 hammertime.on('swiperight', function(ev) {
-    if (snake.dx !== -grid) { // Verificăm dacă șarpele nu se mișcă deja spre stânga
+    if (snake.dx !== -grid) {
         snake.dx = grid;
         snake.dy = 0;
     }
 });
 
 hammertime.on('swipeup', function(ev) {
-    if (snake.dy !== grid) { // Verificăm dacă șarpele nu se mișcă deja în jos
+    if (snake.dy !== grid) {
         snake.dy = -grid;
         snake.dx = 0;
     }
 });
 
 hammertime.on('swipedown', function(ev) {
-    if (snake.dy !== -grid) { // Verificăm dacă șarpele nu se mișcă deja în sus
+    if (snake.dy !== -grid) {
         snake.dy = grid;
         snake.dx = 0;
     }
